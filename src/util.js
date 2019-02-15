@@ -9,10 +9,19 @@ function query(el) {
   return document.createElement('div')
 }
 
+function getCss(dom, pty) {
+  if (dom.currentStyle) {
+    return dom.currentStyle[pty]
+  } else {
+    return window.getComputedStyle(dom, null)[pty]
+  }
+}
+
 function warn(msg) {
   console.warn(`[dChart]: ${msg}`)
 }
 
 export default {
-  query
+  query,
+  getCss
 }
