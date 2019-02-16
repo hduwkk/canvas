@@ -1,16 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <style>
+    #app {
+      width: 600px;
+      height: 400px;
+      border: 1px dashed #000;
+      margin: 50px auto;
+    }
+
+  </style>
 </head>
+
 <body>
-  <div>1</div>
-  <script src="./dist/main.js"></script>
+  <div id="app">
+  </div>
+  <script src="./dist/bundle.js"></script>
   <script>
-    
+    var d = dChart({
+      el: '#app'
+    });
+
+    d.drawLine({
+      points: [{x: 10, y: 10}, {x: 10, y: 110}, {x: 110, y: 110}, {x: 110, y: 10}, {x: 10, y: 10}, {x: 110, y: 110}],
+      needCache: true
+    })
+
+    d.drawLine({
+      points: [{x: 10, y: 120}, {x: 110, y: 120}],
+      style: {strokeStyle: '#490', lineWidth: 2},
+      needCache: true
+    })
+
+    d.drawLine({
+      points: [{x: 10, y: 130}, {x: 110, y: 130}],
+      style: {strokeStyle: '#651', lineWidth: 3},
+      needCache: true
+    })
   </script>
 </body>
+
 </html>

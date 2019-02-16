@@ -1,5 +1,2 @@
-export function fn () {
-  console.log('hello ....')
-}
-
-fn();
+import {dChart} from './dChart.js'
+window.dChart = dChart

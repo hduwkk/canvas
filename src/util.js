@@ -1,4 +1,4 @@
-function query(el) {
+export function query(el) {
   if (typeof el === 'string') {
     el = document.querySelector(el)
   }
@@ -9,7 +9,19 @@ function query(el) {
   return document.createElement('div')
 }
 
-function getCss(dom, pty) {
+const STYLE = ['fillStyle', 'strokeStyle', 'shadowColor', 'shadowBlur', 'shadowOffsetX',
+'shadowOffsetY', 'lineCap', 'lineJoin', 'lineWidth', 'miterLimit', 'font', 'textAlign', 'textBaseline', ]
+
+export function resetStyle(ctx, style) {
+  if (!ctx || !style) return
+  for (let property in style) {
+    if (STYLE.indexOf(property) > -1) {
+      ctx[property] = style[property]
+    }
+  }
+}
+
+export function getCss(dom, pty) {
   if (dom.currentStyle) {
     return dom.currentStyle[pty]
   } else {
@@ -19,9 +31,4 @@ function getCss(dom, pty) {
 
 function warn(msg) {
   console.warn(`[dChart]: ${msg}`)
-}
-
-export default {
-  query,
-  getCss
 }
