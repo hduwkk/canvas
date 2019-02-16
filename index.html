@@ -27,19 +27,23 @@
     });
 
     d.drawLine({
-      points: [{x: 10, y: 10}, {x: 10, y: 110}, {x: 110, y: 110}, {x: 110, y: 10}, {x: 10, y: 10}, {x: 110, y: 110}],
+      points: [
+        [{x: 10, y: 10}, {x: 10, y: 110}, {x: 110, y: 110}, {x: 110, y: 10}, {x: 10, y: 10}, {x: 110, y: 110}],
+        [{x: 10, y: 120}, {x: 110, y: 120}],
+        [{x: 10, y: 130}, {x: 110, y: 130}]
+      ],
       needCache: true
     })
 
-    d.drawLine({
-      points: [{x: 10, y: 120}, {x: 110, y: 120}],
-      style: {strokeStyle: '#490', lineWidth: 2},
-      needCache: true
-    })
+    // d.drawLine({
+    //   points: [{x: 10, y: 120}, {x: 110, y: 120}],
+    //   style: {strokeStyle: '#490', lineWidth: 2},
+    //   needCache: true
+    // })
 
     d.drawLine({
-      points: [{x: 10, y: 130}, {x: 110, y: 130}],
-      style: {strokeStyle: '#651', lineWidth: 3},
+      points: [{x: 10, y: 230}, {x: 110, y: 230}],
+      style: {strokeStyle: '#651', lineWidth: 2},
       needCache: true
     })
   </script>
