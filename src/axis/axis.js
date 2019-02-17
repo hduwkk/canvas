@@ -4,3 +4,5 @@ class Axis {
     this.type = option.type || 'value'
   }
 }
+
+export default Axis

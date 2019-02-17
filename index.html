@@ -23,17 +23,28 @@
   <script src="./dist/bundle.js"></script>
   <script>
     var d = dChart({
-      el: '#app'
+      el: '#app',
+      type: 'line',
+      data: [
+        10,
+        20,
+        8,
+        30,
+        10, 
+        40,
+        10,
+        30
+      ]
     });
-
-    d.drawLine({
-      points: [
-        [{x: 10, y: 10}, {x: 10, y: 110}, {x: 110, y: 110}, {x: 110, y: 10}, {x: 10, y: 10}, {x: 110, y: 110}],
-        [{x: 10, y: 120}, {x: 110, y: 120}],
-        [{x: 10, y: 130}, {x: 110, y: 130}]
-      ],
-      needCache: true
-    })
+    d.drawRects()
+    // d.drawLine({
+    //   points: [
+    //     [{x: 10, y: 10}, {x: 10, y: 110}, {x: 110, y: 110}, {x: 110, y: 10}, {x: 10, y: 10}, {x: 110, y: 110}],
+    //     [{x: 10, y: 120}, {x: 110, y: 120}],
+    //     [{x: 10, y: 130}, {x: 110, y: 130}]
+    //   ],
+    //   needCache: true
+    // })
 
     // d.drawLine({
     //   points: [{x: 10, y: 120}, {x: 110, y: 120}],
@@ -41,11 +52,11 @@
     //   needCache: true
     // })
 
-    d.drawLine({
-      points: [{x: 10, y: 230}, {x: 110, y: 230}],
-      style: {strokeStyle: '#651', lineWidth: 2},
-      needCache: true
-    })
+    // d.drawLine({
+    //   points: [{x: 10, y: 230}, {x: 110, y: 230}],
+    //   style: {strokeStyle: '#651', lineWidth: 2},
+    //   needCache: true
+    // })
   </script>
 </body>
 
